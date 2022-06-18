@@ -15,7 +15,7 @@ resource "tfe_workspace" "random_2" {
     branch         = "develop01"
     oauth_token_id = tfe_oauth_client.main.oauth_token_id
   }
-  working_directory             = "/terraform/random"
+  working_directory             = "/terraform/random_2"
   queue_all_runs                = true
   speculative_enabled           = true
   structured_run_output_enabled = true
