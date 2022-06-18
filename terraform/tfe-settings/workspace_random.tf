@@ -6,13 +6,13 @@ resource "tfe_workspace" "random" {
   organization = tfe_organization.main.name
 
   allow_destroy_plan    = false ## We will not destroy this
-  auto_apply            = false
+  auto_apply            = true
   execution_mode        = "remote"
   file_triggers_enabled = true
   global_remote_state   = true
   vcs_repo {
     identifier     = var.github_repo_name
-    branch         = "main"
+    branch         = "develop01"
     oauth_token_id = tfe_oauth_client.main.oauth_token_id
   }
   working_directory             = "/terraform/random"
