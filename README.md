@@ -7,12 +7,11 @@ This repository is intended to demonstrate basic usage and automation of Terrafo
 - Azure resources workspace
 - Workspace shared state outputs
 
-# Usage
-
 ## Pre-requisites
 
 To use this fully you need accounts.
-Terraform Cloud accounts:
+
+Terraform Cloud:
 https://app.terraform.io/signup/account
 
 Github:
