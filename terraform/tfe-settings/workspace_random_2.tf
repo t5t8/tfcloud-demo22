@@ -45,10 +45,10 @@ locals {
     }
     "random_workspace" = {
       sensitive   = false
-      value       = var.tfe_organization_name
+      value       = tfe_workspace.random.name
       hcl         = false
       category    = "terraform"
-      description = "tfe org for remote states"
+      description = "workspace for remote states"
     }
   }
 }
