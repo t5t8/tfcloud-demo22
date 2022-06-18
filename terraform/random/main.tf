@@ -1,6 +1,8 @@
-resource "random_pet" "main" {
+resource "random_integer" "main" {
+  min = 1
+  max = 7
 }
 
-output "random_pet_name" {
-  value = random_pet.main.id
+output "random_integer" {
+  value = random_integer.main.id
 }
