@@ -37,17 +37,17 @@ resource "tfe_variable" "random_2" {
 locals {
   variables_random_2 = {
     "tfe_organization_name" = {
-      sensitive   = true
+      sensitive   = false
       value       = var.tfe_organization_name
       hcl         = false
-      category    = "env"
+      category    = "terraform"
       description = "tfe org for remote states"
     }
     "random_workspace" = {
-      sensitive   = true
+      sensitive   = false
       value       = var.tfe_organization_name
       hcl         = false
-      category    = "env"
+      category    = "terraform"
       description = "tfe org for remote states"
     }
   }
