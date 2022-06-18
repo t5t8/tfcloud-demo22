@@ -1,8 +1,8 @@
 ## Creates a random integer and outputs it for other workspaces.
 
 resource "random_integer" "main" {
-  min = 4
-  max = 5
+  min = var.min
+  max = var.max
 }
 
 output "random_integer" {
