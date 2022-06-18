@@ -12,7 +12,7 @@ resource "tfe_workspace" "random_2" {
   global_remote_state   = true
   vcs_repo {
     identifier     = var.github_repo_name
-    branch         = "develop01"
+    branch         = var.branch_name
     oauth_token_id = tfe_oauth_client.main.oauth_token_id
   }
   working_directory             = "/terraform/random_2"
