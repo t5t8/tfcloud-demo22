@@ -34,6 +34,9 @@ resource "tfe_variable" "azure_demo" {
 
   lifecycle { ignore_changes = [value] }
 }
+
+## Setup azure required (sensitive) credentials as env vars and a 
+## prefix for resources as terraform var.
 locals {
   variables_azure_demo = {
     "ARM_SUBSCRIPTION_ID" = {
