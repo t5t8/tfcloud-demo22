@@ -12,7 +12,7 @@ resource "tfe_workspace" "azure_demo" {
   global_remote_state   = true
   vcs_repo {
     identifier     = var.github_repo_name
-    branch         = "main"
+    branch         = var.branch_name
     oauth_token_id = tfe_oauth_client.main.oauth_token_id
   }
   working_directory             = "/terraform/azure"
@@ -34,6 +34,9 @@ resource "tfe_variable" "azure_demo" {
 
   lifecycle { ignore_changes = [value] }
 }
+
+## Setup azure required (sensitive) credentials as env vars and a 
+## prefix for resources as terraform var.
 locals {
   variables_azure_demo = {
     "ARM_SUBSCRIPTION_ID" = {

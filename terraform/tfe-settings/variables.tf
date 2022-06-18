@@ -22,3 +22,9 @@ variable "github_repo_name" {
   type        = string
   description = "Github repository path"
 }
+
+variable "branch_name" {
+  type        = string
+  description = "Branch name to use in all workspaces"
+  default     = "main"
+}
