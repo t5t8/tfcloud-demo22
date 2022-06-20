@@ -6,10 +6,10 @@ variable "prefix" {
 
 variable "app_service_sku" {
   type        = string
-  description = "SKU for App service. Defaults to B1, P1v3 is other option"
+  description = "SKU for App service."
   default     = "B1"
   validation {
-    condition     = var.app_service_sku == "B1" || var.app_service_sku == "P1v3"
-    error_message = "Only B1 or P1v3 are accepted."
+    condition     = var.app_service_sku == "P1v2" || var.app_service_sku == "P1v2"
+    error_message = "Only B1 or P1v2 are accepted."
   }
 }
