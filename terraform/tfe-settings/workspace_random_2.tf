@@ -19,7 +19,12 @@ resource "tfe_workspace" "random_2" {
   queue_all_runs                = true
   speculative_enabled           = true
   structured_run_output_enabled = true
-  # terraform_version             = "1.2.2" ## could be defined or latest
+
+  ## Needed on 1st run as variables need this resources
+  depends_on = [
+    tfe_workspace.random
+  ]
+
 }
 
 resource "tfe_variable" "random_2" {
