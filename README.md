@@ -55,6 +55,10 @@ You can define more users to organization or leave the list blank:
 Initialize and apply tfe-settings from CLI.
 You should now be able to see your organization and workspaces from the portal.
 
+NOTE! The default billing plan is Free plan that does not support teams. 1st run will
+fail to error about missing entitlements to create team. You need to login to portal and
+upgrade to team plan or free trial for team features to be enabled.
+
 ### Update Azure env variables
 
 Go to `azure_demo` workspace and select variables. Fill in the Azure credentials using environment variables `ARM_*` 
