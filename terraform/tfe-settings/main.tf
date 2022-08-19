@@ -37,7 +37,7 @@ resource "tfe_team_organization_member" "main" {
 
 
 resource "tfe_oauth_client" "main" {
-  name             = "my-github-oauth-client"
+  name             = "Demo-VCS-connection"
   organization     = tfe_organization.main.name
   api_url          = "https://api.github.com"
   http_url         = "https://github.com"

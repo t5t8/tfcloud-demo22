@@ -14,6 +14,6 @@ variable "max" {
   default     = 1
   validation {
     condition     = var.max < 9 && var.max > 0
-    error_message = "Maximum value must be between 1 and 8"
+    error_message = "Maximum value must be between 1 and 8 "
   }
 }
